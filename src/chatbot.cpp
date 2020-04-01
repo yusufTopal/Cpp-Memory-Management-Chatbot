@@ -46,7 +46,51 @@ ChatBot::~ChatBot()
 
 //// STUDENT CODE
 ////
+    ChatBot::ChatBot(const ChatBot &source){
+        std::cout<< "Copying" << &source << "to instance " << this << std::endl;
+        _image = new wxBitmap(*source._image);
+        _currentNode = source._currentNode;
+        _rootNode = source._rootNode;
+        _chatLogic = source._chatLogic;
 
+    }
+    ChatBot & ChatBot::operator= (const ChatBot &source){
+        std::cout<< "Copying" << &source << "to instance " << this << std::endl;
+        if(this == &source)
+            return *this;
+        _image = new wxBitmap(*source._image);
+        _rootNode = source._rootNode;
+        _currentNode = source._currentNode;
+        _chatLogic = source._chatLogic;
+        return *this;
+
+    }
+    ChatBot::ChatBot(ChatBot &&source) {
+        std::cout<< "Moving" << &source << "to instance " << this << std::endl;
+        _image = new wxBitmap(*source._image);
+        _currentNode = source._currentNode;
+        _chatLogic = source._chatLogic;
+        _rootNode = source._rootNode;
+        source._image = NULL;
+        source._currentNode= nullptr;
+        source._chatLogic = nullptr;
+        source._rootNode = nullptr;
+    }
+    ChatBot &ChatBot::operator =(ChatBot &&source){
+        std::cout<< "Moving" << &source << "to instance " << this << std::endl;
+        if(this == &source){
+            return *this;
+        }
+        _image = new wxBitmap(*source._image);
+        _currentNode = source._currentNode;
+        _chatLogic = source._chatLogic;
+        _rootNode = source._rootNode;
+        source._image = NULL;
+        source._currentNode= nullptr;
+        source._chatLogic = nullptr;
+        source._rootNode = nullptr;
+        return *this;
+    }
 ////
 //// EOF STUDENT CODE
 
