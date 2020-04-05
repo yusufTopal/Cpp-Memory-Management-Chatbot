@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/debug/membot",
+            "program": "${workspaceFolder}/build/membot",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/debug",
