@@ -1,3 +1,0 @@
-/home/yusuftopal/Desktop/Cpp-Memory-Management-Chatbot/CMakeFiles/rebuild_cache.dir
-/home/yusuftopal/Desktop/Cpp-Memory-Management-Chatbot/CMakeFiles/membot.dir
-/home/yusuftopal/Desktop/Cpp-Memory-Management-Chatbot/CMakeFiles/edit_cache.dir
